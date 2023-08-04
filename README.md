@@ -1,6 +1,6 @@
 # my_project
 
-A new Flutter project.
+My new project to improve my developing skills. 
 
 ## Getting Started
 
