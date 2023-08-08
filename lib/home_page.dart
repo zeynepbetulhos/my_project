@@ -14,13 +14,13 @@ class HomePage extends StatelessWidget {
             Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilePage()),
             );
           },
-            icon: Icon(Icons.person),
+            icon: const Icon(Icons.person),
           ),
           IconButton(onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilePage2()),
+            Navigator.push(context, MaterialPageRoute(builder: (context) => const ProfilePage2()),
             );
           },
-            icon: Icon(Icons.person),
+            icon: const Icon(Icons.person),
           ),
         ],
       ),

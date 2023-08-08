@@ -6,16 +6,16 @@ enum MyThemes {
 }
 
 class ThemeNotifier extends ChangeNotifier {
-  ThemeData _currentTheme = ThemeData.light();
+  ThemeMode _currentTheme = ThemeMode.light;
   bool _isDarkMode = false;
 
-  ThemeData get currentTheme => _currentTheme;
+  ThemeMode get currentTheme => _currentTheme;
 
   bool get isDarkMode => _isDarkMode;
 
   void switchTheme() {
     _isDarkMode =! _isDarkMode;
-    _currentTheme =! _isDarkMode ? ThemeData.dark() : ThemeData.light();
+    _currentTheme =! _isDarkMode ? ThemeMode.dark : ThemeMode.light;
     notifyListeners();
   }
 }

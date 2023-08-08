@@ -10,29 +10,27 @@ class InformationsContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<ThemeNotifier>(
-      builder: (context, themeNotifier, child) {
-        return Container(
+    final themeNotifier = Provider.of<ThemeNotifier>(context, listen: false);
+
+    return Container(
           height: 80,
-          color: themeNotifier.isDarkMode ? Color(0xFFE3F2FD) : Color(0xFF1A237E),
-          padding: EdgeInsets.all(20.0),
+          color: themeNotifier.isDarkMode ? const Color(0xFFE3F2FD) : const Color(0xFF1A237E),
+          padding: const EdgeInsets.all(20.0),
           child: Row(
             children: [
               ClipOval(
                 child: Container(
-                    padding: EdgeInsets.all(8.0),
-                    color: Color(0xFF00838F),
+                    padding: const EdgeInsets.all(8.0),
+                    color: const Color(0xFF00838F),
                     child: Icon(iconData, color: Colors.white,)),
               ),
-              SizedBox(width: 40),
+              const SizedBox(width: 40),
               Expanded(
-                  child: Text(text, style: TextStyle(
+                  child: Text(text, style: const TextStyle(
                       fontSize: 20, fontWeight: FontWeight.bold),)),
-              Icon(Icons.navigate_next, size: 30.0,),
+              const Icon(Icons.navigate_next, size: 30.0,),
             ],
           ),
         );
-      }
-    );
   }
 }

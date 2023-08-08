@@ -18,12 +18,12 @@ class NumbersWidget extends StatelessWidget {
         children: <Widget> [
           Text(
             value,
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
           ),
-          SizedBox(height: 2),
+          const SizedBox(height: 2),
           Text(
             text,
-            style: TextStyle(fontSize: 12),
+            style: const TextStyle(fontSize: 12),
           ),
         ],
       ),

@@ -10,36 +10,30 @@ class ProfilePage2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final themeNotifier = Provider.of<ThemeNotifier>(context, listen: false);
+
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 80,
         backgroundColor: Colors.transparent,
         centerTitle: true,
-        title: Text('Personal Info', style: TextStyle(color: Colors.grey,
+        title: const Text('Personal Info', style: TextStyle(color: Colors.grey,
             fontSize: 25.0,
             fontWeight: FontWeight.bold),),
-        leading: Consumer<ThemeNotifier>(
-          builder: (context,themeNotifier, child) {
-            return IconButton(
-                icon: Icon(Icons.arrow_back),
-                color: themeNotifier.isDarkMode ? Colors.black : Colors.white,
-                onPressed: () {
-                  Navigator.pop(context);
-                }
-            );
-          },
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          color: themeNotifier.isDarkMode ? Colors.black : Colors.white,
+          onPressed: () {
+            Navigator.pop(context);
+          }
         ),
         actions: [
-          Consumer<ThemeNotifier>(
-            builder: (context, themeNotifier, child) {
-              return IconButton(
-                icon: Icon(themeNotifier.isDarkMode ? Icons.dark_mode : Icons.light_mode),
-                color: themeNotifier.isDarkMode ? Colors.black : Colors.white,
-                onPressed: () {
-                  Provider.of<ThemeNotifier>(context, listen: false)
-                      .switchTheme();
-                },
-              );
+          IconButton(
+            icon: Icon(themeNotifier.isDarkMode ? Icons.dark_mode : Icons.light_mode),
+            color: themeNotifier.isDarkMode ? Colors.black : Colors.white,
+            onPressed: () {
+              Provider.of<ThemeNotifier>(context, listen: false)
+                  .switchTheme();
             },
           ),
         ],
@@ -48,11 +42,11 @@ class ProfilePage2 extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.zero,
         children: [
-          SizedBox(height: 50.0),
+          const SizedBox(height: 50.0),
           buildProfile(),
-          SizedBox(height: 20.0),
+          const SizedBox(height: 20.0),
           buildName2(),
-          SizedBox(height: 50),
+          const SizedBox(height: 50),
           buildInformation(),
         ],
       ),
@@ -60,7 +54,7 @@ class ProfilePage2 extends StatelessWidget {
   }
 
   Widget buildProfile() =>
-      CircleAvatar(
+      const CircleAvatar(
         backgroundImage: AssetImage('assets/woman.jpg'),
         radius: 60.0,
         backgroundColor: Colors.grey,
@@ -69,17 +63,17 @@ class ProfilePage2 extends StatelessWidget {
   Widget buildName2() => Center(
     child: Column(
       children: [
-        Text(
+        const Text(
           'Name Surname',
           style: TextStyle(
             fontWeight: FontWeight.w500,
             fontSize:25,
           ),
         ),
-        SizedBox(height: 5.0),
+        const SizedBox(height: 5.0),
         Container(
-          padding: EdgeInsets.symmetric(horizontal: 25.0),
-          child: Text(
+          padding: const EdgeInsets.symmetric(horizontal: 25.0),
+          child: const Text(
             'type specimen book. it has survived not only five centuries',
             style: TextStyle(fontSize: 15),
           ),
