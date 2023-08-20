@@ -1,16 +1,17 @@
 # my_project
 
-My new project to improve my developing skills. 
+This flutter project contains two profile page uis.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Both profile pages have dark theme options that can be changed with the button on appbar.
 
-A few resources to get you started if this is your first Flutter project:
+Down below are the pictures of the results.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<img width="227" alt="profile_page_1" src="https://github.com/zeynepbetulhos/my_project/assets/124428758/07b62eaf-462b-4c20-85a3-8ea257674c3b">
+<img width="229" alt="profile_page_1_ dark" src="https://github.com/zeynepbetulhos/my_project/assets/124428758/bea24bfb-b821-4356-93cb-bb74ce42f64d">
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+.
+
+<img width="197" alt="profile_page_2" src="https://github.com/zeynepbetulhos/my_project/assets/124428758/58b882fa-0ff6-4000-9525-c3396b1fb073">
+<img width="199" alt="profile_page_2_dark" src="https://github.com/zeynepbetulhos/my_project/assets/124428758/406e88e8-2d9e-4970-b0f1-94e4eb5d2ab9">
