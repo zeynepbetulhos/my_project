@@ -14,7 +14,6 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<ContentModel> contentList;
     final themeNotifier = Provider.of<ThemeNotifier>(context, listen: false);
 
     final top = coverHeight - profileHeight / 2;
